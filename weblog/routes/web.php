@@ -1,5 +1,4 @@
 <?php
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// weblog
+Route::get('/blog/', 'BlogController@main');
