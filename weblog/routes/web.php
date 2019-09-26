@@ -1,4 +1,9 @@
 <?php
 
 // weblog
-Route::get('/blog/', 'BlogController@main');
+Route::get('/', 'BlogController@index');
+Route::prefix('blog')->group(function () {
+    Route::get('/', 'BlogController@main')->name('blog.home');
+});
+
+
