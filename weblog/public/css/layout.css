@@ -31,7 +31,7 @@ body{
 	border:1px solid gray;
 	float:left;
 	width:29%;
-	height:650px;
+	height:840px;
 	background-color:silver;
 	font-family:majid;
 }
@@ -42,7 +42,7 @@ body{
 	border-radius:5px;
 	float:right;
 	width:70%;
-	height:650px;
+	height:840px;
 	background-color:lightgray;
 	font-family:majid;
 }

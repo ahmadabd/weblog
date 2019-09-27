@@ -73,7 +73,15 @@
 	<aside class="sec1 text-right">
 					@yield('aside')
 	</aside>
+	
 	</div>
+	<br>
+	<br>
+	<br>
+	<div>
+	<h1>&nbsp;</h1>
+	</div>
+	
 
 		</body>
 </html>
