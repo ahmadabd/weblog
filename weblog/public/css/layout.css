@@ -1,16 +1,20 @@
 body{
 	background:url("../image/1.jpg") no-repeat;
+	background-position: center;
+	background-size: cover;
 }
 #nav1{
 	width:100%;
 	position:fixed;
-	height:65px;
+	height:auto;
 	border-radius:10px;
 	font-size:20px;
 	font-family:majid;
+	
 
 }
 .hed1{
+	
 	padding:10px;
 	box-shadow:0px 0px 5px blue;
 	border-radius:5px;
@@ -31,7 +35,7 @@ body{
 	border:1px solid gray;
 	float:left;
 	width:29%;
-	height:840px;
+	height:900px;
 	background-color:silver;
 	font-family:majid;
 }
@@ -42,7 +46,7 @@ body{
 	border-radius:5px;
 	float:right;
 	width:70%;
-	height:840px;
+	height:900px;
 	background-color:lightgray;
 	font-family:majid;
 }

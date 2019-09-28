@@ -24,7 +24,7 @@
 
 
 <div class="container-fluid">
- <nav class="navbar navbar-expand-md bg-info navbar-dark" style="flex-direction: row-reverse;position:fixed;width:100%;overflow:hidden;border:2px solid cyan" id="nav1"> 
+ <nav class="navbar navbar-expand-md bg-info navbar-dark" style="flex-direction: row-reverse;position:fixed;width:100%;overflow:hidden;border:2px solid cyan;" id="nav1"> 
         
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
@@ -50,7 +50,7 @@
             </ul>
         </div>  
    
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<div class="collapse navbar-collapse" id="collapsibleNavbar">
 
 		<form class="form-inline mr-auto">
 		<input class="form-control text-right" type="text" placeholder="?  ?  ?" aria-label="Search">
@@ -58,7 +58,9 @@
 		</form>
 		</div>
 	</nav>
-			<br/>
+			<br>
+			<br>
+			<br>
 			<br>
 			<br>
 	<div class="container-fluid">
