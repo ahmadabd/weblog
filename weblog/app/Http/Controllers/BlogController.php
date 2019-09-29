@@ -16,8 +16,4 @@ class BlogController extends Controller
         $datas = DB::table('blogs')->paginate(10);
         return view('blog.main', compact('datas'));
     }
-
-    public function login(){
-        return view('login');
-    }
 }

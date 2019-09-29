@@ -9,6 +9,10 @@ Route::prefix('blog')->group(function () {
 
 
 // admin page
-Route::get('/login', 'BlogController@login');
+Route::prefix('admin')->group(function() {
+    Route::get('/login', 'AdminController@login');
+    Route::get('/admin', 'AdminController@admin');
+});
+
 
 
