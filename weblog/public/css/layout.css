@@ -1,18 +1,14 @@
 body{
-	background:url("../image/1.jpg") no-repeat;
+	background:url("../images/background.jpg") no-repeat;
 	background-position: center;
 	background-size: cover;
 }
+
 #nav1{
-	width:100%;
-	position:fixed;
-	height:auto;
-	border-radius:10px;
 	font-size:20px;
 	font-family:majid;
-	
-
 }
+
 .hed1{
 	
 	padding:10px;
@@ -20,7 +16,7 @@ body{
 	border-radius:5px;
 	border:1px solid gray;
 	width:100%;
-	height:200px;
+	height: auto;
 	color:black;
 	background-color:lightblue;
 	transition:all 50ms Linear;
@@ -35,9 +31,11 @@ body{
 	border:1px solid gray;
 	float:left;
 	width:29%;
-	height:900px;
+	height:auto;
 	background-color:silver;
 	font-family:majid;
+	margin-bottom: 20px;
+	min-height: 550px;
 }
 .sec2{
 	padding:10px;
@@ -46,15 +44,18 @@ body{
 	border-radius:5px;
 	float:right;
 	width:70%;
-	height:900px;
+	height: auto;
 	background-color:lightgray;
 	font-family:majid;
+	margin-bottom: 20px;
+	min-height: 550px;
 }
 
 @font-faces{
 	font-family:majid;
 	src:url('/public/fonts/Iranian Sans.ttf');
 }
+
 *{
 	box-sizing:border-box;
 }
