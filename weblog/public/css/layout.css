@@ -1,0 +1,60 @@
+body{
+	background:url("../image/1.jpg") no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+#nav1{
+	width:100%;
+	position:fixed;
+	height:auto;
+	border-radius:10px;
+	font-size:20px;
+	font-family:majid;
+	
+
+}
+.hed1{
+	
+	padding:10px;
+	box-shadow:0px 0px 5px blue;
+	border-radius:5px;
+	border:1px solid gray;
+	width:100%;
+	height:200px;
+	color:black;
+	background-color:lightblue;
+	transition:all 50ms Linear;
+	font-family:majid;
+	
+}
+
+.sec1{
+	padding:10px;
+	box-shadow:0px 0px 5px black;
+	border-radius:5px;	
+	border:1px solid gray;
+	float:left;
+	width:29%;
+	height:900px;
+	background-color:silver;
+	font-family:majid;
+}
+.sec2{
+	padding:10px;
+	box-shadow:0px 0px 5px black;
+	border:1px solid gray;
+	border-radius:5px;
+	float:right;
+	width:70%;
+	height:900px;
+	background-color:lightgray;
+	font-family:majid;
+}
+
+@font-faces{
+	font-family:majid;
+	src:url('/public/fonts/Iranian Sans.ttf');
+}
+*{
+	box-sizing:border-box;
+}
