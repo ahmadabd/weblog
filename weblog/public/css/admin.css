@@ -1,0 +1,33 @@
+body{
+    background:url("../images/background2.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-family: majid;
+
+}
+nav{
+    font-family: majid;
+    font-size: 20px;
+
+}
+.div1{
+    box-shadow: 0px 0px 5px black;
+    border:1px solid black;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    width: 100%;
+    height:auto;
+    background-color:silver;
+    min-height: 800px;
+    font-family: majid;
+
+}
+@font-face{
+	font-family:majid;
+	src:url('/public/fonts/Iranian Sans.ttf');
+}
+*{
+    box-sizing: border-box;
+}
+
