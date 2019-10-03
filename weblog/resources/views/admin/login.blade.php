@@ -14,16 +14,27 @@
         <h2>Login page</h2>
         <div class="row">
             <div class="col">
-                <form class="form" action="" method="POST">
+
+                @if (Auth::check())
+                    <script>window.location="/admin"</script>
+                @endif
+
+                @if ($message = Session::get('errorMsg'))
+                    <p style="color:red">{{ $message }}</p>
+                @endif
+                <form class="form" action="/login" method="POST">
+                    @csrf
                     <label for="email">Email:</label>
                     <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" style="margin-bottom: 10px">
+                    @error('email')
+                        <p style="color:red">{{ $message }}<p>
+                    @enderror
+
                     <label for="password">Password:</label>
                     <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="password" style="margin-bottom: 10px">
-                    <div class="form-check">
-                    <label class="form-check-label" style="margin:10px">
-                        <input class="form-check-input" type="checkbox" name="remember"> Remember me
-                    </label>
-                    </div>
+                    @error('password')
+                        <p style="color:red">{{ $message }}<p>
+                    @enderror
                     <button type="submit" class="btn btn-primary">Login</button>
                 </form>
             </div>

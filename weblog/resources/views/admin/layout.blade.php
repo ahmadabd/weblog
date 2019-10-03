@@ -20,6 +20,10 @@
     <title>Admin</title>
 </head>
 <body>
+    @if (!Auth::check())
+        <script>window.location='/login'</script>
+    @endif
+
     <nav class="navbar navbar-expand-md bg-dark navbar-dark" style="flex-direction: row-reverse;" id="nav1">
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -29,10 +33,12 @@
 
             <ul class="navbar-nav" style="flex-direction:row-reverse;height:50px;padding:5px">
                 <li class="nav-item">
-                    <a class="navbar-brand" href="#" style="margin-right:15px;">ادمین</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../contact" style="margin-right:25px;">وبلاگ</a>
+                    <a @if ($page = 'weblog')
+                        class="nav-link active"
+                        @else
+                        class="nav-link"
+                    @endif 
+                    href="{{ route('adminBlog') }}" style="margin-right:25px;">وبلاگ</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#" style="margin-right:25px;">پادکست</a>
@@ -45,16 +51,16 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#" style="margin-right:25px;">رزومه</a>
-            </li>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('logout') }}" style="margin-right:25px;">خروج</a>
+                </li>
             </ul>
         </div>
-
-
-
     </nav>
 
     <div class="div1 container text-right">
-        <h3 style="text-align:center">Welcome Admin</h3>
+        @yield('content')
     </div>
 
 </body>

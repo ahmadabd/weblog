@@ -21,7 +21,8 @@
 	</head>
 	<body>
 
-
+		@include('nav')
+		
 		<!-- content -->
 		<div class="container-fluid" style="margin-top:15px">
 			<header class="hed1 text-right">
