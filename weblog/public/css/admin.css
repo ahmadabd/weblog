@@ -3,13 +3,8 @@ body{
     background-position: center;
     background-size: cover;
     font-family: majid;
-
 }
-nav{
-    font-family: majid;
-    font-size: 20px;
 
-}
 .div1{
     box-shadow: 0px 0px 5px black;
     border:1px solid black;
