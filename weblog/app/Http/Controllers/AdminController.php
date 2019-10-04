@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use Auth;
 
@@ -24,7 +23,7 @@ class AdminController extends Controller
         );
 
         if(Auth::attempt($user_data)){
-            return redirect('weblog')->with('page', 'weblog');
+            return redirect('/admin/weblog')->with('page', 'weblog');
         }
         else{
             return back()->with('errorMsg', 'Wrong Login Inputs');
@@ -38,6 +37,6 @@ class AdminController extends Controller
     public function logout(){
         Auth::logout();
 
-        return redirect('/login');
+        return redirect('/admin/login');
     }
 }

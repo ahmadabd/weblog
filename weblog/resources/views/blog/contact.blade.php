@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layoutMain')
 
 @section('title')
 contact us

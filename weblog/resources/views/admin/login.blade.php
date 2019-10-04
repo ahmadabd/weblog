@@ -22,10 +22,10 @@
                 @if ($message = Session::get('errorMsg'))
                     <p style="color:red">{{ $message }}</p>
                 @endif
-                <form class="form" action="/login" method="POST">
+                <form class="form" action="/admin/login" method="POST">
                     @csrf
                     <label for="email">Email:</label>
-                    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" style="margin-bottom: 10px">
+                    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" value="{{ old('email') }}" style="margin-bottom: 10px">
                     @error('email')
                         <p style="color:red">{{ $message }}<p>
                     @enderror

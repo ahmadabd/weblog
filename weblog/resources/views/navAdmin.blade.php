@@ -1,5 +1,3 @@
-
-
 <nav class="navbar navbar-expand-md bg-dark navbar-dark" style="flex-direction: row-reverse;font-family: majid;font-size: 20px;" id="nav1">
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">

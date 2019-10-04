@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layoutMain')
 
 @section('title')
     home
@@ -20,7 +20,7 @@
             <p style="text-align:center">{{ $data->content }}</p>
         </div>
     @empty
-        <div>
+        <div style="border: 1px solid gray; border-radius: 10px; margin: 20px; padding: 30px">
             <p>چیزی موجود نسیت</p>
         </div>
     @endforelse

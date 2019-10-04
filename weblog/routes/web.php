@@ -14,12 +14,12 @@ Route::get('/contact',function(){
 });
 
 // admin page
-//Route::prefix('/admin')->group(function(){
+Route::prefix('/admin')->group(function(){
     Route::get('/login', 'AdminController@login')->name('login');
     Route::post('/login', 'AdminController@checkLogin');
     Route::get('/weblog', 'AdminController@admin')->name('adminBlog');
     Route::get('/logout', 'AdminController@logout')->name('logout');
-//});
+});
 
 
 

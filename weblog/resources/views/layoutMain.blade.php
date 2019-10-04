@@ -21,7 +21,7 @@
 	</head>
 	<body>
 
-		@include('nav')
+		@include('navMain')
 		
 		<!-- content -->
 		<div class="container-fluid" style="margin-top:15px">
