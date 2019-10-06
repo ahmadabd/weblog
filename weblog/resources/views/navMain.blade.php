@@ -7,10 +7,20 @@
 
         <ul class="navbar-nav" style="flex-direction:row-reverse;height:50px;padding:5px">
             <li class="nav-item">
-                <a class="navbar-brand" href="{{ url('/blog') }}" style="margin-right:15px;">صفحه اول</a>
+                <a @if ($page == 'weblog')
+                    class="nav-link active" 
+                @else
+                    class="nav-link" 
+                @endif
+                href="{{ url('/blog') }}" style="margin-right:15px;">وبلاگ</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ url('/contact') }}" style="margin-right:15px;">تماس با ما</a>
+                <a @if ($page == 'contact')
+                    class="nav-link active" 
+                @else
+                    class="nav-link" 
+                @endif
+                class="nav-link" href="{{ url('/contact') }}" style="margin-right:15px;">تماس با ما</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#" style="margin-right:15px;">پروژه ها</a>

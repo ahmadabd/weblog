@@ -16,7 +16,7 @@
             <div class="col">
 
                 @if (Auth::check())
-                    <script>window.location="/admin"</script>
+                    <script>window.location="/admin/weblog"</script>
                 @endif
 
                 @if ($message = Session::get('errorMsg'))

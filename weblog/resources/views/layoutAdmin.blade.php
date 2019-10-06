@@ -26,8 +26,9 @@
     @include('navAdmin')
 
     <div class="div1 container text-right">
+        <div class="container-fluid">
         @yield('content')
+        </div>
     </div>
-
 </body>
 </html>
