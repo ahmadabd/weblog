@@ -13,7 +13,12 @@ Route::prefix('blog')->group(function () {
 Route::get('/contact',function(){
     return view('blog.contact')->with('page', 'contact');
 });
-
+//podcasts
+Route::get('/podcast','PodcastController@main')->name('podcast');
+//videos
+Route::get('/video','VideoController@main')->name('video');
+//projects
+Route::get('/projects','ProjectController@main')->name('project');
 // admin page
 Route::prefix('/admin')->group(function(){
     Route::get('/login', 'AdminController@login')->name('login');
