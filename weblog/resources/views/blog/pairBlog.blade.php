@@ -12,7 +12,8 @@
         <hr>
         <h2>{{ $blog->title }}</h2>
         <hr>
-        <p style="text-align:right">{{ $blog->content }}</p>
+        <p class="text-left">{{ $blog->content }}</p>
+
     </div>
 
 @endsection

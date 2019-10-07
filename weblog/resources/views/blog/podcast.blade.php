@@ -9,13 +9,17 @@
 
     @forelse ($podcasts as $podcast)
         <div class="col" style="background:cornsilk;border:2px solid gray; border-radius: 10px; padding: 10px;margin-bottom:10px">
-            <audio controls autoplay preload="auto">
+
+            <hr>
+                <h2 style="text-align: center">{{ $podcast->title }}</h2>
+
+            <hr>
+            <div  style="display: flex;justify-content: center;margin-bottom: 10px">
+            <audio controls preload="auto">
                 <source src="{{ $podcast->podcast }}">
             </audio>
-            <hr>
-                <h2>{{ $podcast->title }}</h2>
-            </a>
-            <hr>
+
+            </div>
             <p style="text-align:right">{{ $podcast->content }}</p>
         </div>
     @empty

@@ -17,9 +17,9 @@
             <hr>
             <a href="/blog/{{ $data->id }}">
                 <h2>{{ $data->title }}</h2>
-            </a>    
+            </a>
             <hr>
-            <p style="text-align:right">{{ Str::limit($data->content, 250) }}</p>
+            <p style="text-align:left">{{ Str::limit($data->content, 250) }}</p>
         </div>
     @empty
         <div style="border: 1px solid gray; border-radius: 10px; margin: 20px; padding: 30px">
