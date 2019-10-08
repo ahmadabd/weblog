@@ -7,15 +7,20 @@
 
         <ul class="navbar-nav" style="flex-direction:row-reverse;height:50px;padding:5px">
             <li class="nav-item">
-                <a @if ($page = 'weblog')
+                <a @if ($page == 'weblog')
                     class="nav-link active"
                     @else
                     class="nav-link"
-                @endif 
+                @endif
                 href="{{ route('adminBlog') }}" style="margin-right:25px;">وبلاگ</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#" style="margin-right:25px;">پادکست</a>
+                <a @if ($page == 'Podcasts')
+                   class="nav-link active"
+                   @else
+                   class="nav-link"
+                   @endif
+                   href="{{ route('adminPodcast') }}" style="margin-right:25px;">پادکست</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#" style="margin-right:25px;">پروژه</a>

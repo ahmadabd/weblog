@@ -8,28 +8,40 @@
         <ul class="navbar-nav" style="flex-direction:row-reverse;height:50px;padding:5px">
             <li class="nav-item">
                 <a @if ($page == 'weblog')
-                    class="nav-link active" 
+                    class="nav-link active"
                 @else
-                    class="nav-link" 
+                    class="nav-link"
                 @endif
                 href="{{ url('/blog') }}" style="margin-right:15px;">وبلاگ</a>
             </li>
             <li class="nav-item">
                 <a @if ($page == 'contact')
-                    class="nav-link active" 
+                    class="nav-link active"
                 @else
-                    class="nav-link" 
+                    class="nav-link"
                 @endif
                 class="nav-link" href="{{ url('/contact') }}" style="margin-right:15px;">تماس با ما</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#" style="margin-right:15px;">پروژه ها</a>
+                <a @if ($page == 'project')
+                   class="nav-link active"
+                   @else
+                   class="nav-link"
+                   @endif class="nav-link" href="{{ url('/projects') }}" style="margin-right:15px;">پروژه ها</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#" style="margin-right:15px;">ویدیوها</a>
+                <a @if ($page =='video')
+                   class="nav-link active"
+                   @else
+                   class="nav-link"
+                   @endif class="nav-link" href="{{ url('/video') }}" style="margin-right:15px;">ویدیوها</a>
             </li>
             <li class="nav-item">
-                    <a class="nav-link" href="#" style="margin-right:15px">پادکست ها</a>
+                <a @if ($page =='podcast')
+                    class="nav-link active"
+                   @else
+                    class="nav-link"
+                   @endif href="{{ url('/podcast') }}" style="margin-right:15px">پادکست ها</a>
             </li>
         </ul>
     </div>

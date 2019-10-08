@@ -25,14 +25,14 @@
 	<body>
 
 		@include('navMain')
-		
+
 		<!-- content -->
 		<div class="container-fluid" style="margin-top:15px">
 			<header class="hed1 text-right">
 				@yield('header')
 			</header>
 			<br>
-			<article class="sec2 text-right">
+			<article class="sec2">
 				@yield('article')
 			</article>
 
