@@ -26,7 +26,7 @@ class AdminController extends Controller
         );
 
         if(Auth::attempt($user_data)){
-            return redirect('/admin/weblog')->with('page', 'weblog');
+            return redirect('/admin/weblog')->with('page','weblog');
         }
         else{
             return back()->with('errorMsg', 'Wrong Login Inputs');
@@ -34,13 +34,16 @@ class AdminController extends Controller
     }
 
     public function admin(){
-        return view('admin.weblog');
+        return view('admin.weblog')->with('page','weblog');
     }
 
     public function logout(){
         Auth::logout();
 
         return redirect('/admin/login');
+    }
+    public function show(){
+        return view('admin.podcast')->with('page','Podcasts');
     }
 
     public function storeBlog(Request $request){
@@ -60,4 +63,21 @@ class AdminController extends Controller
 
         return back()->with('success', 'Image uploaded successfully');
     }
+        public function storePodcast(Request $request){
+            $this->validate($request, [
+                'title' => 'required',
+                'content' => 'required',
+                'podcast' => 'required|mimes:mpeg,mpga,mp3,wac,aac|max:20480'
+            ]);
+
+            $title = $request->get('title');
+            $content = $request->get('content');
+            $podcast = $request->file('podcast');
+            $new_name = rand().'.'.$podcast->getClientOriginalExtension();
+            $podcast->move(public_path("podcasts"), $new_name);
+
+            DB::table('podcasts')->insert(['title' => $title, 'content' => $content, 'podcast' => 'podcasts/'.$new_name]);
+
+            return back()->with('success', 'Podcast uploaded successfully');
+        }
 }

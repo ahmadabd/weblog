@@ -15,6 +15,7 @@ Route::get('/contact',function(){
 });
 //podcasts
 Route::get('/podcast','PodcastController@main')->name('podcast');
+
 //videos
 Route::get('/video','VideoController@main')->name('video');
 //projects
@@ -25,6 +26,8 @@ Route::prefix('/admin')->group(function(){
     Route::post('/login', 'AdminController@checkLogin');
     Route::get('/weblog', 'AdminController@admin')->name('adminBlog');
     Route::post('/weblog', 'AdminController@storeBlog');
+    Route::get('/pods', 'AdminController@show')->name('adminPodcast');
+    Route::post('adminPodcast','AdminController@storePodcast')->name('AdminPodcasts');
     Route::get('/logout', 'AdminController@logout')->name('logout');
 });
 
